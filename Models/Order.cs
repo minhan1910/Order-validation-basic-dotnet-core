@@ -1,10 +1,12 @@
-﻿using Order_Customers_Assignment.CustomValidator;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Order_Customers_Assignment.CustomValidator;
 using System.ComponentModel.DataAnnotations;
 
 namespace Order_Customers_Assignment.Models
 {
     public class Order
     {
+        [BindNever]
         public int? OrderNo { get; set; }
 
         [Display(Name = "Order Date")]
